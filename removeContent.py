@@ -4,7 +4,7 @@ try:
     newDataBase = sqlite3.connect('first_data.db')
     cursor = newDataBase.cursor()
     
-    remove_id = input('Input a ID for remove: ')
+    remove_id = int(input('Input a ID for remove: '))
     cursor.execute(f'DELETE FROM people WHERE id = {remove_id}')
 
     newDataBase.commit()
